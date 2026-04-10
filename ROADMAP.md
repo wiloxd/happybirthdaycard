@@ -7,26 +7,28 @@
 
 ---
 
-## Current Milestone: Ship a working personalised 3D birthday card page
+## In Progress
 
-What we're building toward right now. Tasks here are in sequence —
-complete them in order, top to bottom.
-
-- ~~Stage 1 — Static HTML skeleton: `index.html` + `css/style.css` + `js/main.js` with plain "Happy Birthday [NAME HERE]" text, no 3D or animation yet. Name populated from `?name=` URL param with fallback.~~
-- 🟡 Stage 2 — 3D text effect: Apply CSS 3D text styling (layered `text-shadow` / `transform` technique) to make the greeting look three-dimensional. **Pause for review.**
-- 🔴 Stage 3 — Click-to-spin animation: Add CSS keyframe animation; clicking the text triggers a full spin. **Pause for review.**
-- 🔴 Stage 4 — Polish & mobile: Responsive layout, sensible fallback name, tidy typography, and a `404.html` page. Verify on mobile viewport. **Pause for review.**
+- 🟡 Multicoloured diagonal stripe background flash on click — thick stripes appear, cycle/drift, fade back to original background
 
 ---
 
 ## Up Next
 
-- Add a festive background (confetti burst or gradient) triggered on page load
 - Support a `?color=` param to customise the text colour
 
 ---
 
 ## Done
+
+- ~~Milestone: Ship a working personalised 3D birthday card page~~
+- ~~Stage 1 — Static HTML skeleton with name from `?name=` URL param~~
+- ~~Stage 2 — 3D text effect via layered `text-shadow`~~
+- ~~Stage 3 — Click-to-spin animation~~
+- ~~Stage 4 — Polish & mobile: responsive layout, hint text, 404 page~~
+- ~~Confetti burst from cursor on click~~
+- ~~Gravity-driven confetti physics~~
+- ~~Click anywhere to spin~~
 
 ---
 
