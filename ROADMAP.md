@@ -12,8 +12,8 @@
 What we're building toward right now. Tasks here are in sequence —
 complete them in order, top to bottom.
 
-- 🟡 Stage 3 — Click-to-spin animation: Add CSS keyframe animation; clicking the text triggers a full spin. **Pause for review.**
-- 🔴 Stage 4 — Polish & mobile: Responsive layout, sensible fallback name, tidy typography, and a `404.html` page. Verify on mobile viewport. **Pause for review.**
+- ~~Stage 3 — Click-to-spin animation: Add CSS keyframe animation; clicking the text triggers a full spin.~~
+- 🟡 Stage 4 — Polish & mobile: Responsive layout, sensible fallback name, tidy typography, and a `404.html` page. Verify on mobile viewport. **Pause for review.**
 
 ---
 
@@ -28,6 +28,7 @@ complete them in order, top to bottom.
 
 - ~~Stage 1 — Static HTML skeleton with name from `?name=` URL param~~
 - ~~Stage 2 — 3D text effect via layered `text-shadow`~~
+- ~~Stage 3 — Click-to-spin animation~~
 
 ---
 

@@ -12,6 +12,8 @@ body {
   justify-content: center;
   background-color: #1a0533;
   font-family: 'Lilita One', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* ─── Card container ───────────────────────────────────────── */
@@ -24,16 +26,32 @@ body {
   perspective: 900px;
 }
 
+.card__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 /* ─── Greeting text ────────────────────────────────────────── */
 .greeting {
   display: flex;
   flex-direction: column;
-  gap: 0.15em;
+  gap: 0.1em;
   line-height: 1;
   color: #fff;
   font-size: clamp(2.5rem, 10vw, 7rem);
   cursor: pointer;
   user-select: none;
+  transition: filter 0.2s ease;
+}
+
+.greeting:hover {
+  filter: brightness(1.15);
+}
+
+.greeting:active {
+  filter: brightness(0.9);
 }
 
 /* ─── Spin animation ───────────────────────────────────────── */
@@ -76,4 +94,41 @@ body {
     5px 5px 0 #644800,
     6px 6px 0 #4a3400,
     8px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ─── 404 home link ────────────────────────────────────────── */
+.home-link {
+  font-family: system-ui, sans-serif;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ─── Click hint ───────────────────────────────────────────── */
+.hint {
+  font-family: system-ui, sans-serif;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  animation: hint-fade 2s ease 1.5s forwards;
+  opacity: 1;
+}
+
+@keyframes hint-fade {
+  to { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hint {
+    animation: none;
+    opacity: 0;
+  }
 }
