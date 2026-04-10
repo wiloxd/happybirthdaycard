@@ -1,0 +1,45 @@
+/* ─── Reset & base ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a0533;
+  font-family: 'Lilita One', system-ui, sans-serif;
+}
+
+/* ─── Card container ───────────────────────────────────────── */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ─── Greeting text ────────────────────────────────────────── */
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  line-height: 1;
+  color: #fff;
+  font-size: clamp(2.5rem, 10vw, 7rem);
+  cursor: default;
+  user-select: none;
+}
+
+.greeting__line {
+  display: block;
+}
+
+.greeting__name {
+  display: block;
+  color: #f9c74f;
+}
