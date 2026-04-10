@@ -1,0 +1,62 @@
+/* ─── Reset & base ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a0533;
+  font-family: 'Lilita One', system-ui, sans-serif;
+}
+
+/* ─── Card container ───────────────────────────────────────── */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ─── Greeting text ────────────────────────────────────────── */
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  line-height: 1;
+  color: #fff;
+  font-size: clamp(2.5rem, 10vw, 7rem);
+  cursor: default;
+  user-select: none;
+}
+
+.greeting__line {
+  display: block;
+  color: #ffffff;
+  text-shadow:
+    1px 1px 0 #9b5de5,
+    2px 2px 0 #8b4dd5,
+    3px 3px 0 #7b3dc5,
+    4px 4px 0 #6b2db5,
+    5px 5px 0 #5b1da5,
+    6px 6px 0 #4b0d95,
+    8px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.greeting__name {
+  display: block;
+  color: #f9c74f;
+  text-shadow:
+    1px 1px 0 #d4a017,
+    2px 2px 0 #b88a10,
+    3px 3px 0 #9c740a,
+    4px 4px 0 #805e04,
+    5px 5px 0 #644800,
+    6px 6px 0 #4a3400,
+    8px 8px 20px rgba(0, 0, 0, 0.6);
+}

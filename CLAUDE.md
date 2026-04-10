@@ -11,20 +11,24 @@ Before making **any** change to this codebase:
 
 ## What This App Is
 
-<!-- One-paragraph description of the project purpose, who uses it, and how it's deployed. Fill this in when bootstrapping the project. -->
+Happy Birthday Card is a simple, shareable static web page that displays a personalised "Happy Birthday [NAME]" message in bold 3D text. The recipient's name is set via a `?name=` URL query parameter, so anyone can generate a custom card by sharing a link. Clicking the 3D text triggers a spin animation. The app is a single-page static site deployed on Netlify — no build step, no backend, no dependencies.
 
 ---
 
 ## File Structure
 
-<!-- Document the file structure here once established. Keep this up to date as files are added or moved. -->
-
 ```
 /
+├── index.html              # Main birthday card page (markup only, no inline CSS/JS)
+├── css/
+│   └── style.css           # All styles: layout, 3D text effect, spin animation
+├── js/
+│   └── main.js             # URL param parsing (?name=) and click-to-spin logic
+├── 404.html                # Minimal 404 page (required for Netlify redirect rules)
+├── netlify.toml            # Netlify config: publish dir, security headers, redirects
 ├── CLAUDE.md               # This file — Claude Code instructions
 ├── ROADMAP.md              # Feature roadmap and task backlog (source of truth)
-├── README.md               # Project overview, setup, and usage
-└── ...
+└── README.md               # Project overview, setup, and usage
 ```
 
 ---
@@ -70,19 +74,29 @@ Before making **any** change to this codebase:
 
 ## Data Formats
 
-<!-- Document any data schemas (JSON structures, database models, etc.) here so Claude can reference them when editing data files. -->
+**URL query parameters:**
+
+| Parameter | Required | Example | Description |
+|-----------|----------|---------|-------------|
+| `name`    | No       | `?name=Alice` | Name displayed in the birthday message. Defaults to a placeholder (e.g. "Friend") if absent. |
+
+No other data formats — this is a purely client-side static app.
 
 ---
 
 ## Deployment
 
-<!-- Document how the app is deployed: platform, build steps, environment variables, and any post-deploy steps. -->
+**Platform:** Netlify (static site, no build step)
+
+- **Publish directory:** `.` (repo root)
+- **Build command:** none
+- **Environment variables:** none
+- Push to the deployment branch to trigger a Netlify deploy.
+- Security headers and internal-file redirects are configured in `netlify.toml`.
+- To share a personalised card: `https://<your-site>.netlify.app/?name=Alice`
 
 ---
 
 ## Design System
-
-<!-- Record the design system page location here once established. Example: -->
-<!-- Design system: `/ds/index.html` -->
 
 ⚠️ **No design system page has been set up yet.** When UI work begins, ask about creating one.
