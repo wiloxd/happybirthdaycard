@@ -9,7 +9,7 @@ const hint = document.getElementById('js-hint');
 greeting.addEventListener('click', () => {
   if (greeting.classList.contains('is-spinning')) return;
 
-  hint.style.display = 'none';
+  hint.style.visibility = 'hidden';
 
   greeting.classList.add('is-spinning');
   greeting.addEventListener('animationend', () => {
