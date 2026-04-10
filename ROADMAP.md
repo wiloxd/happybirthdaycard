@@ -12,9 +12,7 @@
 What we're building toward right now. Tasks here are in sequence —
 complete them in order, top to bottom.
 
-- ~~Stage 1 — Static HTML skeleton: `index.html` + `css/style.css` + `js/main.js` with plain "Happy Birthday [NAME HERE]" text, no 3D or animation yet. Name populated from `?name=` URL param with fallback.~~
-- 🟡 Stage 2 — 3D text effect: Apply CSS 3D text styling (layered `text-shadow` / `transform` technique) to make the greeting look three-dimensional. **Pause for review.**
-- 🔴 Stage 3 — Click-to-spin animation: Add CSS keyframe animation; clicking the text triggers a full spin. **Pause for review.**
+- 🟡 Stage 3 — Click-to-spin animation: Add CSS keyframe animation; clicking the text triggers a full spin. **Pause for review.**
 - 🔴 Stage 4 — Polish & mobile: Responsive layout, sensible fallback name, tidy typography, and a `404.html` page. Verify on mobile viewport. **Pause for review.**
 
 ---
@@ -27,6 +25,9 @@ complete them in order, top to bottom.
 ---
 
 ## Done
+
+- ~~Stage 1 — Static HTML skeleton with name from `?name=` URL param~~
+- ~~Stage 2 — 3D text effect via layered `text-shadow`~~
 
 ---
 
