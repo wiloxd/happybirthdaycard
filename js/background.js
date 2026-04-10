@@ -143,7 +143,7 @@
     drawInterval = setInterval(function () {
       if (!getPresent().length) { stop(); return; }
       drawFrame();
-    }, 70);
+    }, 200);
   }
 
   document.addEventListener('click', function () {
