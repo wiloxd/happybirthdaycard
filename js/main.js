@@ -6,7 +6,7 @@ document.getElementById('js-name').textContent = name;
 const greeting = document.getElementById('js-greeting');
 const hint = document.getElementById('js-hint');
 
-greeting.addEventListener('click', () => {
+document.addEventListener('click', () => {
   if (greeting.classList.contains('is-spinning')) return;
 
   hint.style.visibility = 'hidden';
