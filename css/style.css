@@ -17,6 +17,40 @@ body {
   cursor: pointer;
 }
 
+/* ─── Background stripes ───────────────────────────────────── */
+.bg-stripes {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    #f94144   0px,  #f94144   80px,
+    #f3722c  80px,  #f3722c  160px,
+    #f9c74f 160px,  #f9c74f  240px,
+    #43aa8b 240px,  #43aa8b  320px,
+    #4361ee 320px,  #4361ee  400px,
+    #9b5de5 400px,  #9b5de5  480px
+  );
+}
+
+.bg-stripes.is-active {
+  animation: stripes-flash 1.4s ease-out forwards;
+}
+
+@keyframes stripes-flash {
+  0%   { opacity: 0;    background-position: 0 0; }
+  18%  { opacity: 0.92; }
+  100% { opacity: 0;    background-position: 480px 480px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-stripes.is-active {
+    animation: none;
+  }
+}
+
 /* ─── Card container ───────────────────────────────────────── */
 .card {
   display: flex;
@@ -25,6 +59,8 @@ body {
   padding: 2rem;
   text-align: center;
   perspective: 900px;
+  position: relative;
+  z-index: 1;
 }
 
 .card__inner {
